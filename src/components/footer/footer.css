@@ -1,0 +1,78 @@
+.footer { 
+   margin: 0px 47px 13px 36px;
+   height: 164px;
+   position: relative;
+   background: url(../../assets/images/footer-hands.png) no-repeat;
+   background-size: 100%;
+   border-radius: 7px;
+   max-height: 164px;
+   display: flex;
+   justify-content: center;
+}
+.footer::before{
+   content: "";
+   background: radial-gradient(rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 100%);
+   width: 350px;
+   height: 350px;
+   border-radius: 50%;
+   position: absolute;
+   top: -136%;
+   left: -46%;
+}
+
+
+.footer__contact {
+   padding: 29px 0px 18px 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 380px;
+}
+.footer__contact-title{
+   font-size: 1.27rem;
+   line-height: 1.42rem;
+   padding-right: 3px;
+}
+
+.footer__contact-text {
+   margin-top: 29px;
+   font-size: 0.72rem;
+   text-align: center;
+   padding-right: 4px;
+   /* word-spacing: 0.5px; */
+}
+
+.footer__form{
+   display: flex;
+   margin: 21px auto 0px auto;
+   gap: 13px;
+}
+.footer__email {
+   background: linear-gradient(180deg, #AA14F0 -42.59%, rgba(0, 0, 0, 0) -42.59%, #CB8DE8 -42.58%, rgba(203, 143, 232, 0.18) 4.35%, rgba(151, 60, 68, 0.055) 99.99%, rgba(199, 137, 228, 0) 100%), linear-gradient(77.91deg, rgba(185, 54, 245, 0.1375) 1.95%, rgba(185, 54, 245, 0.11) 1.95%, rgba(170, 20, 240, 0.0825) 108.82%);
+   font-size: 0.5rem;
+   width: 156px;
+   border-radius: 1.5px;
+   padding-left: 10px;
+}
+
+.footer__email::placeholder{
+   font-size: 0.5rem;
+   color: #E0A3C9;
+   opacity: 56%;
+}
+.footer__end-btn {
+   height: 18px;
+   padding: 5px 22px;
+   font-size: 0.5rem;
+}
+
+.footer__end-btn::after{
+   content: url(../../assets/logo/small-arrow.svg);
+   padding-left: 5px;
+}
+
+.footer_end-img {
+   max-width: 100%;
+   opacity: 50%;
+   mix-blend-mode: difference;
+}

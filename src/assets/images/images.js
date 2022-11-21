@@ -1,0 +1,21 @@
+import BigBoarder from "./big-boarder.svg";
+import Checked from "./checked.svg";
+import FooterHands from "./footer-hands.png";
+import GridItem from "./grid-item.jpg";
+import Hands from "./hand.svg";
+import Handshake from "./handshake.svg";
+import HeaderBot1 from "./header-bot-img1.png";
+import HeaderBot2 from "./header-bot-img2.png";
+import HeroLine from "./hero-img-line.png";
+import HeroImg from "./hero-img.png";
+import Lightbulb from "./lightbulb.svg";
+import Arrow from "./menu-arrow.svg";
+import Person from "./person.png";
+import Person2 from "./person2.png";
+import Person3 from "./person3.png";
+import Person4 from "./person4.png";
+import SmallBoarder from "./small-boarder.svg";
+import Vector from "./Vector 5.svg";
+import Video from "./video-img.png";
+
+export {BigBoarder,Checked,FooterHands,GridItem,Hands,Handshake,HeaderBot1,HeaderBot2,HeroImg,HeroLine,Lightbulb,Arrow,Person,Person2,Person3,Person4,SmallBoarder,Vector,Video};
