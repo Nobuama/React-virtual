@@ -2,8 +2,9 @@ import React, {useState} from "react";
 import { CARDS } from "../../../assets/scripts/localStorage";
 import { AddNewCardDialog } from "../../Dialogs/AddNewCardDialog";
 import { GameCards } from "./GameCards";
+import { ContentMenu } from "./Sort";
 
-export const Main = ({isUserLogged, currentItems}) => {
+export const Main = ({isUserLogged, currentItems, filter}) => {
     const [isAddNewCardDialogVisible, setAddNewCardDialogVisible] = useState(false);
     
     const handleOpenAddNewCardDialog = () => {
@@ -16,15 +17,8 @@ export const Main = ({isUserLogged, currentItems}) => {
  
     return( 
       <section className="mainGames">
-          <div className="content__menu">
-              <h2 className="content__title title">VR Games</h2>
-              <div className="content__btn-block">
-                <button className="content__new-card button" onClick={handleOpenAddNewCardDialog}>Add new card</button>
-              </div>
-          </div>
+          <ContentMenu openDialog={handleOpenAddNewCardDialog} filter={filter}/>
           {CARDS.length ? <GameCards currentItems={currentItems}/> : null}
-          <ul className="content__nav">
-          </ul>
           {isAddNewCardDialogVisible && (
               <AddNewCardDialog closeDialog={handleCloseAddnewCardDialog}/>)}
       </section>

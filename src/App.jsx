@@ -5,10 +5,9 @@ import {
   delLocalStorage,
   Home,
   Games,
-  Features} from "./components";
+  Features,
+  CARDS} from "./components";
 import {Routes, Route} from "react-router-dom";
-
-
   
 const App = () => {
   const verifyUser = () => {
@@ -24,6 +23,26 @@ const App = () => {
   };
 
   const [isUserLogged, setIsUserLogged] = useState(verifyUser);
+  const [games, sortGames] = useState(CARDS);
+  
+  const sortNewLast = () => {
+    sortGames(CARDS.sort((a,b) => b.createdAt-a.createdAt))
+  };
+  const sortNewFirst = () => {
+    sortGames(CARDS.sort((a,b) => a.createdAt-b.createdAt))
+  }
+  const filterGames = (e) =>{
+    switch (e.target.value){
+       case "newlast":
+          sortNewLast();
+          console.log(CARDS);
+          break;
+        case "newfirst":
+          sortNewFirst();
+          console.log(CARDS);
+          break;
+  };
+}
   
   const handleUserAuth = () => {
     console.log('click');
@@ -46,6 +65,8 @@ const App = () => {
           handleUserAuth={handleUserAuth}
           isUserLogged={isUserLogged}
           deleteUser={handleUserNoAuth}
+          filter={filterGames}
+          games={games}
           />}/>
           <Route path="/Features" element={<Features 
           handleUserAuth={handleUserAuth}
@@ -54,6 +75,7 @@ const App = () => {
           />}/>
         </Routes>
     </div>
-  )}
+  );
+}
 
 export default App;

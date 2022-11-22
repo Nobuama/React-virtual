@@ -6,9 +6,9 @@ import { CARDS } from "../../index";
 import "../../styles/games.css"
 
 
-export const Games = ({isUserLogged, handleUserAuth, deleteUser}) => {
+export const Games = ({isUserLogged, handleUserAuth, deleteUser, filter, games}) => {
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 2;
+  const itemsPerPage = 9;
   const endOffset = itemOffset + itemsPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = CARDS.slice(itemOffset, endOffset);
@@ -22,8 +22,15 @@ export const Games = ({isUserLogged, handleUserAuth, deleteUser}) => {
        deleteUser={deleteUser}
 		 />
 			<MenuBurger/>
-			<Main isUserLogged={isUserLogged} currentItems={currentItems}/>
-      <PaginatedItems pageCount={pageCount} setItemOffset={setItemOffset}/>
+			<Main 
+      isUserLogged={isUserLogged} 
+      currentItems={currentItems} 
+      filter={filter}/>
+      <PaginatedItems
+      games={games}
+      pageCount={pageCount} 
+      setItemOffset={setItemOffset} 
+      itemsPerPage={itemsPerPage}/>
 		</div>
 		);
 	}
