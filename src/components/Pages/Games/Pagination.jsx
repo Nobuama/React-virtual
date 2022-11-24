@@ -5,11 +5,14 @@ import { CARDS } from '../../../assets/scripts/localStorage';
 export const PaginatedItems = ({itemsPerPage, pageCount, setItemOffset, games}) =>{
   
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % games.length;
+    const newOffset = (event.selected * itemsPerPage) % CARDS.length;
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
     );
+    
     setItemOffset(newOffset);
+    console.log(newOffset);
+
   };
 
   return (
@@ -29,7 +32,6 @@ export const PaginatedItems = ({itemsPerPage, pageCount, setItemOffset, games}) 
         pageCount={pageCount}
         previousLabel="<"
         renderOnZeroPageCount={null}
-        initialPage={0}
       />
     </>
   );

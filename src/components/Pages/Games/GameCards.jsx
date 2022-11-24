@@ -1,20 +1,16 @@
 import React, { useState } from "react";
-import { CARDS } from "../../../assets/scripts/localStorage";
 import { PreviewDialog } from "../../Dialogs/PreviewDialog";
 
 
 export const GameCards = ({currentItems}) =>{
-  const findOneById = () => {
-    return currentItems.find(item => item.id === Event.currentTarget.id );
+  const findOneById = (e) => {
+    return currentItems.find((item) => item.id === e.currentTarget.id );
   };
-  console.log(CARDS);
-  // const game = findOneById(CARDS);
+  const [game, setGame] = useState("");
   const [isPreviewDialogOpen, setIsPreviewDalogOpen] = useState(false);
   const handleOpenPreviewDialog = (e) => {
     setIsPreviewDalogOpen(true);
-    console.log(e.currentTarget.id);
-    console.log(findOneById());
-  };
+    setGame(findOneById(e))  };
   const handleClosePreviewDialog = () => {
     setIsPreviewDalogOpen(false);
   }
@@ -37,7 +33,10 @@ export const GameCards = ({currentItems}) =>{
       </li>
         ))
       }
-      {/* {isPreviewDialogOpen && <PreviewDialog/>} */}
+      {isPreviewDialogOpen && <PreviewDialog 
+      closeDialog={handleClosePreviewDialog}
+      game={game}
+      />}
     </ul>
   )
 }

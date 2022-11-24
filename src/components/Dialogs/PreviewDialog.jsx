@@ -1,26 +1,23 @@
-import React, {useState} from "react";
+import React from "react";
 import { createPortal } from "react-dom";
-import { CARDS } from "../../assets/scripts/localStorage";
+import { PreviewDialogWrapper } from "./PreviewDialogWrapper";
+import './previewDialog.css';
 
-export const PreviewDialog = (game) => {
-
-
-  const portalRoot = document.getElementById('portal')
-  
-
+export const PreviewDialog = ({game, closeDialog}) => {
+  const portalRoot = document.getElementById('portal');
 
   return createPortal(
-    <div class="modal-wrapper">
-         <div class="item">
-            <img src={game.img} alt="grid-item" class="item-img"/>
-            <h3 class="item-header">{game.gameName}</h3>
-            <p class="item-text">{game.gameDescription}</p>
-            <div class="item__user">
-               <img class="item__userPhoto" src={game.userPhoto} alt="userPhoto"/>
-               <span class="item__userName">{game.userName}</span>
-            </div>
-            <p class="item-text">{game.userReview}</p>
-         </div>
-      </div>
-  ,portalRoot)
+    <PreviewDialogWrapper closeDialog={closeDialog}>
+      <div className="item">
+        <img src={game.img} alt="grid-item" className="item-img"/>
+        <h3 className="item-header">{game.gameName}</h3>
+        <p className="item-text">{game.gameDescription}</p>
+        <div className="item__user">
+           <img className="item__userPhoto" src={game.userPhoto} alt="userPhoto"/>
+           <span className="item__userName">{game.userName}</span>
+        </div>
+        <p className="item-text">{game.userReview}</p>
+     </div>
+    </PreviewDialogWrapper>
+  , portalRoot)
 }

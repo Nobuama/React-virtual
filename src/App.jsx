@@ -66,7 +66,7 @@ const App = () => {
           isUserLogged={isUserLogged}
           deleteUser={handleUserNoAuth}
           filter={filterGames}
-          games={games}
+          // games={games}
           />}/>
           <Route path="/Features" element={<Features 
           handleUserAuth={handleUserAuth}

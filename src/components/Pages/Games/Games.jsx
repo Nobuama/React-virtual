@@ -27,7 +27,7 @@ export const Games = ({isUserLogged, handleUserAuth, deleteUser, filter, games})
       currentItems={currentItems} 
       filter={filter}/>
       <PaginatedItems
-      games={games}
+      // games={games}
       pageCount={pageCount} 
       setItemOffset={setItemOffset} 
       itemsPerPage={itemsPerPage}/>
