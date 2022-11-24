@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import ReactPaginate from "react-paginate";
 import { PreviewDialog } from "../../Dialogs/PreviewDialog";
 
-
-export const GameCards = ({currentItems}) =>{
+export const GameCards = ({currentItems, pageCount, handlePageClick}) =>{
   const findOneById = (e) => {
     return currentItems.find((item) => item.id === e.currentTarget.id );
   };
@@ -10,12 +10,13 @@ export const GameCards = ({currentItems}) =>{
   const [isPreviewDialogOpen, setIsPreviewDalogOpen] = useState(false);
   const handleOpenPreviewDialog = (e) => {
     setIsPreviewDalogOpen(true);
-    setGame(findOneById(e))  };
+    setGame(findOneById(e))
+  };
   const handleClosePreviewDialog = () => {
     setIsPreviewDalogOpen(false);
-  }
-
+  };
   return(
+    <>
     <ul className="content__items">
       {currentItems.map((card)=> (
           <li key={card.id} id={card.id} className="content__item" onClick={handleOpenPreviewDialog}>
@@ -38,5 +39,23 @@ export const GameCards = ({currentItems}) =>{
       game={game}
       />}
     </ul>
+    
+    <ReactPaginate
+        containerClassName='content__nav'
+        pageLinkClassName="content__btn"
+        activeLinkClassName='content__btn--active'
+        previousLinkClassName='content__btn'
+        nextLinkClassName='content__btn'
+        disabledLinkClassName='content__btn--disabled'
+        breakLinkClassName='content__btn'
+        breakLabel="..."
+        nextLabel=">"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="<"
+        renderOnZeroPageCount={null}
+      />
+    </>
   )
 }

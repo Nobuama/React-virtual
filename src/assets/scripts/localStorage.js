@@ -12,13 +12,4 @@ export const writeLocalStorage=(userData, name)=>{
 export const delLocalStorage=(name)=>{
    localStorage.removeItem(name);
 };
-
-export let CARDS;
-(readLocalStorage("Games") ? CARDS = readLocalStorage("Games") : CARDS = [] );
-
-
-// if (readVirtualUserLocal("virtualUser")){
-//   VirtualUser=readVirtualUserLocal("virtualUser");    
-// } else VirtualUser.userAuth=false;
-
  

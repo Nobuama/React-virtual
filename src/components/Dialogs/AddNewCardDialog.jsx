@@ -2,13 +2,20 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import { currentUser } from '../../assets/scripts/mock';
 import { CreateOverlay } from './DialogOverlay';
-import {DialogInputs} from './inputs';
-import { CARDS, readLocalStorage } from '../../assets/scripts/localStorage';
+import { DialogInputs } from './inputs';
 import { writeLocalStorage } from '../../assets/scripts/localStorage';
 import './dialog.css';
 
 
-export const AddNewCardDialog = ({closeDialog}) => {
+export const AddNewCardDialog = ({
+  closeDialog, 
+  games,
+  currentItems,
+  setCurrentItems, 
+  setPageCount,
+  itemOffset,
+  endOffset,
+  itemsPerPage}) => {
   const portalRoot = document.getElementById('portal');
 
   const getValuesFromCard = (form) => {   
@@ -31,9 +38,10 @@ export const AddNewCardDialog = ({closeDialog}) => {
   event.preventDefault();
   const formValues = getValuesFromCard(newCardForm);
 
-  CARDS.push(formValues);
-  console.log(CARDS);
-  writeLocalStorage(CARDS, 'Games');
+  games.push(formValues);
+  writeLocalStorage(games, 'Games');
+  setPageCount(Math.ceil(games.length / itemsPerPage));
+  setCurrentItems(games.slice(itemOffset, endOffset));
   closeDialog();
 };
 

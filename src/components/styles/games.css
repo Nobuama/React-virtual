@@ -104,9 +104,11 @@
 } */
 
 .mainGames{
-	margin: 1.25rem 2.4rem 1.25rem 4.2rem;
-	position: relative;
-	min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem 2.4rem 1.25rem 4.2rem;
+  position: relative;
+  /* min-height: 85vh; */
 }
 .mainGames::before{
 	content: "";
@@ -156,10 +158,10 @@
 	column-gap: 2.75rem;
 	row-gap: 1.42rem;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-start;
   margin-top: 50px;
+  min-height: 75vh;
 }
-
 .noCards{
 	font-size: 64px;
 	font-weight: bold;
@@ -169,7 +171,6 @@
 	position: relative;
 	width: 228px;
 	height: 151px;
-	
 }
 
 .content__item:hover{
@@ -211,7 +212,6 @@
 	display: flex;
 	flex-direction: column;
 	width: 50%;
-
 }
 
 .content__card-name {
@@ -229,6 +229,7 @@
 	justify-content: center;
 	display: flex;
 	gap: 8px;
+  justify-self:end;
 }
 .content__btn {
 	display: block;

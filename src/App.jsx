@@ -5,8 +5,7 @@ import {
   delLocalStorage,
   Home,
   Games,
-  Features,
-  CARDS} from "./components";
+  Features} from "./components";
 import {Routes, Route} from "react-router-dom";
   
 const App = () => {
@@ -23,26 +22,26 @@ const App = () => {
   };
 
   const [isUserLogged, setIsUserLogged] = useState(verifyUser);
-  const [games, sortGames] = useState(CARDS);
+  const [games, sortGames] = useState("");
   
-  const sortNewLast = () => {
-    sortGames(CARDS.sort((a,b) => b.createdAt-a.createdAt))
-  };
-  const sortNewFirst = () => {
-    sortGames(CARDS.sort((a,b) => a.createdAt-b.createdAt))
-  }
-  const filterGames = (e) =>{
-    switch (e.target.value){
-       case "newlast":
-          sortNewLast();
-          console.log(CARDS);
-          break;
-        case "newfirst":
-          sortNewFirst();
-          console.log(CARDS);
-          break;
-  };
-}
+//   const sortNewLast = () => {
+//     sortGames(CARDS.sort((a,b) => b.createdAt-a.createdAt))
+//   };
+//   const sortNewFirst = () => {
+//     sortGames(CARDS.sort((a,b) => a.createdAt-b.createdAt))
+//   }
+//   const filterGames = (e) =>{
+//     switch (e.target.value){
+//        case "newlast":
+//           sortNewLast();
+//           console.log('CARDS');
+//           break;
+//         case "newfirst":
+//           sortNewFirst();
+//           console.log('CARDS');
+//           break;
+//   };
+// }
   
   const handleUserAuth = () => {
     console.log('click');
@@ -65,7 +64,7 @@ const App = () => {
           handleUserAuth={handleUserAuth}
           isUserLogged={isUserLogged}
           deleteUser={handleUserNoAuth}
-          filter={filterGames}
+          // filter={filterGames}
           // games={games}
           />}/>
           <Route path="/Features" element={<Features 
