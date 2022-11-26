@@ -1,4 +1,4 @@
-import { Hands, Handshake, Checked, Lightbulb} from "../../assets/images/images"
+import { Hands, Handshake, Checked, Lightbulb} from "../../../../assets/images/images"
 
 export const VALUES = [
    {  

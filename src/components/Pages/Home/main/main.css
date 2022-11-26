@@ -152,12 +152,12 @@
 }
 .hero__bot-image:first-child {
    align-self: start;
-   background: no-repeat url(../../assets/images/big-boarder.svg);
+   background: no-repeat url(../../../../assets/images/big-boarder.svg);
    background-size: cover;
 }
 .hero__bot-image:nth-child(2) {
    align-self: end;
-   background: no-repeat url(../../assets/images/small-boarder.svg);
+   background: no-repeat url(../../../../assets/images/small-boarder.svg);
    background-size: cover;
 }
 .hero__bot-descr {
@@ -198,7 +198,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background: no-repeat url(../../assets/images/Vector\ 5.svg) 100%;
+   background: no-repeat url(../../../../assets/images/Vector\ 5.svg) 100%;
    background-size: cover;
    position: relative;
 }
@@ -343,7 +343,7 @@
 }
 
 .values__title::after{
-   content: url(../../assets/logo/hearts.png);
+   content: url(../../../../assets/logo/hearts.png);
    position: absolute;
    top: 25px;
    left: 78px;

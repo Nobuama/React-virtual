@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderBot1, HeaderBot2 } from "../../assets/images/images";
+import { HeaderBot1, HeaderBot2 } from "../../../../assets/images/images";
 
 
 export const HeroBot = () => {

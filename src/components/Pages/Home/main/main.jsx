@@ -1,7 +1,6 @@
 import React from "react";
+import {Hero, MainContent, Feedbacks, Values} from "../index";
 import "./main.css";
-import "./mobile-main.css";
-import { MainContent, Hero, Values, Feedbacks} from "..";
 
 
 export const Main = () => {

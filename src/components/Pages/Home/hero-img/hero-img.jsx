@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroImg, HeroLine } from "../../assets/images/images";
+import { HeroImg, HeroLine } from "../../../../assets/images/images";
 
 export const HeroImgBlock = () => {
    return (

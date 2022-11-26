@@ -1,4 +1,4 @@
-import { Video } from "../../assets/images/images";
+import { Video } from "../../../../assets/images/images";
 
 export const MainContent = () => {
    return(

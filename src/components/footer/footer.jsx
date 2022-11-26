@@ -1,6 +1,5 @@
 import React from "react";
 import "./footer.css";
-import "./mobile-footer.css"
 
 export const Footer = () => {
 	const submitEmail = (e) => {

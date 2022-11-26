@@ -1,8 +1,8 @@
 import React from "react";
-import {Header, MenuBurger } from "../../index";
+import {Header} from "../../index";
 import { Main } from "./main";
-import "../../styles/games.css"
-
+import "./games.css";
+import '../../styles/mobile.css';
 export const Games = ({isUserLogged, handleUserAuth, deleteUser}) => {
   
 	return(
@@ -12,7 +12,6 @@ export const Games = ({isUserLogged, handleUserAuth, deleteUser}) => {
        handleUserAuth={handleUserAuth}
        deleteUser={deleteUser}
 		 />
-			<MenuBurger/>
 			<Main 
       isUserLogged={isUserLogged}/>
 		</div>

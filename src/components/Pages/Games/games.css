@@ -106,9 +106,11 @@
 .mainGames{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 1.25rem 2.4rem 1.25rem 4.2rem;
   position: relative;
-  /* min-height: 85vh; */
+  min-height: 85vh;
 }
 .mainGames::before{
 	content: "";
@@ -155,12 +157,12 @@
 }
 .content__items {
 	display: flex;
+  justify-self:flex-start;
+  align-items: center;
 	column-gap: 2.75rem;
 	row-gap: 1.42rem;
 	flex-wrap: wrap;
-	align-items: flex-start;
   margin-top: 50px;
-  min-height: 75vh;
 }
 .noCards{
 	font-size: 64px;
