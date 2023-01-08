@@ -1,0 +1,114 @@
+.overlay{
+	z-index: 1000;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(0, 0, 0, 0.8);
+	position: fixed;
+	display: flex;
+	justify-content: center;
+}
+
+.modal__block{
+  max-width: 854px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #09010E;
+  border-radius: 5px;
+  flex: 1 1 100%;
+}
+
+.modal__form{
+  display: flex;
+  flex-direction: column;
+  margin: 48px 147px;
+}
+
+
+.modal__header{
+  background: url(../../assets/images/Vector\ 5.svg) 100% no-repeat;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 39px 7px 36px 5px;
+  padding: 30px 41px;
+}
+
+.modal__legend{
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.sign-in__email{
+  margin-bottom: 16px;
+}
+
+.sign-in__password{
+  margin-bottom: 40px;
+}
+
+.modal__btn{
+  background: linear-gradient(99.99deg, #B936F5 -21.45%, #C64C85 100%, #F1005B 100%);
+  align-self: center;
+  padding: 10px 37px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.modal__form input{
+  background-color: #000;
+  border: 2px solid #C8D1E5;
+  border-radius: 5px;
+  padding: 18px 32px;
+  font-size: 18px;
+}
+
+.modal__form input::placeholder{
+  font-size: 18px;
+}
+
+.new-card{
+  max-width: 854px;
+  width: 100%;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #09010E;
+  position: relative;
+  overflow: hidden;
+}
+.new-card::before{
+  content: "";
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(37.26% 37.26% at 50% 50%, rgba(170, 20, 240, 0.31) 0%, rgba(170, 20, 240, 0) 100%);
+  position: absolute;
+  bottom: -60%;
+  left: -40%;
+  z-index: 0;
+}
+
+.new-card__btn{
+  background: linear-gradient(99.99deg, #B936F5 -21.45%, #C64C85 100%, #F1005B 100%);
+  align-self: center;
+  padding: 10px 37px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+.new-card__inp{
+  background-color: #000;
+  border: 2px solid #C8D1E5;
+  border-radius: 5px;
+  padding: 18px 32px;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+@media (max-device-width: 450px){
+  .modal__form{
+    margin: 20px 15px;
+  }
+  .modal__header{
+    margin: 20px 7px 20px 5px;
+  }
+}

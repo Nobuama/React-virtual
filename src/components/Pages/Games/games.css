@@ -1,0 +1,162 @@
+
+.mainGames{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.25rem 2.4rem 1.25rem 4.2rem;
+  position: relative;
+  min-height: 85vh;
+}
+.mainGames::before{
+	content: "";
+	position: absolute;
+	bottom: -10%;
+	left: -30%;
+	width: 370px;
+	height: 370px;
+	border-radius: 50%;
+	background: radial-gradient(37.26% 37.26% at 50% 50%, rgba(170, 20, 240, 0.31) 0%, rgba(170, 20, 240, 0) 100%);
+}
+.content__menu {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex: 0 1 10%;
+	flex-wrap: wrap;
+}
+.content__title {
+	font-size: 1.21rem;
+	line-height: 2rem;
+}
+
+.content__btn-block{
+	display: flex;
+	gap: 20px;
+}
+
+.content__new-card{
+	padding: 12px 10px;
+}
+
+.content__popup {
+	width: 136px;
+	background: none;
+	border: 1px solid #5A5B6A;
+	border-radius: 4px;
+	padding: 7px 0px 4px 4px;
+	word-spacing: 5px;
+}
+.content__opt {
+	background: #010208;
+}
+.content__items {
+	display: flex;
+  justify-self:flex-start;
+  align-items: center;
+	column-gap: 2.75rem;
+	row-gap: 1.42rem;
+	flex-wrap: wrap;
+  margin-top: 50px;
+}
+.noCards{
+	font-size: 64px;
+	font-weight: bold;
+	
+}
+.content__item {
+	position: relative;
+	width: 228px;
+	height: 151px;
+}
+
+.content__item:hover{
+	box-shadow: 0 0 20px 4px #B936F5 ;
+} 
+.content__img {
+	object-fit: cover;
+	width: 228px;
+	height: 151px;
+	border: 1px solid #5A5B6A;
+	border-radius: 5px;
+	z-index: 1;
+}
+.content__decsription {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	height: 55px;
+	background-color: #B936F540;
+	border-radius: 0 0 0 5px;
+	backdrop-filter: blur(40px);
+	display: flex;
+	flex-direction: row;
+	padding: 0.35rem 0.92rem;
+	width: 100%;
+	justify-content: space-between;
+	gap: 19px;
+	word-wrap: break-word;
+}
+
+.content__name{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.content__review{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.content__card-name {
+	font-size: 0.5rem;
+	text-decoration: underline;
+	font-weight: 600;
+}
+.content__properties {
+	font-weight: 400;
+	font-size: 0.5rem;
+	color: #EFDEDE;
+}
+.content__nav {
+	flex: 0 1 10%;
+	justify-content: center;
+	display: flex;
+	gap: 8px;
+  justify-self:end;
+}
+.content__btn {
+	display: block;
+	width: 31px;
+	height: 31px;
+	color: #000;
+	background-color: #fff;
+	font-size: 1rem;
+	line-height: 1.42rem;
+	font-family: SF Pro Display;
+	text-align: center;
+	padding: 5px;
+	border: 1px solid #DFE3E8;
+	border-radius: 4px;
+  align-self: center;
+
+}
+.previous, .next{
+  align-self: center;
+}
+.content__btn--disabled {
+	background-color: #7e8286;
+	border: 1px solid #7e8286;
+	color: #C4CDD5;
+}
+.content__btn--arr{
+  color: #C4CDD5;
+}
+.content__btn--active {
+	border: 1px solid #4200FF;
+	color: #4200FF;
+}
